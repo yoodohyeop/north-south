@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 	<head>
 		<!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -82,8 +82,15 @@
 					<h3 class="upload-text">얼굴 사진을 올려놓거나 눌러서 업로드를 하세요!</h3>
 				</div>
 			</div>
+			
 			<div class="file-upload-content">
 				<img class="file-upload-image" src="#" id="face-image" alt="your image" />
+				<div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                </div>
+                <p class="text-center">AI가 당신의 얼굴을 분석중입니다.</p>
+            </div>
+				
 				<p class="result-message"></p>
 				<p class="result-message2"></p>
                 
@@ -136,6 +143,8 @@
 
 			function removeUpload() {
 				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+								            $('.file-upload-content').hide();
+
 				$('.file-upload-content').hide();
 				$('.image-upload-wrap').show();
 			}
@@ -205,7 +214,9 @@
   				 default: 
 						resultMessege = "알수없음"
     			     break;
-				}		
+				}
+			    $('.text-center').hide();
+				$('.spinner-border').hide();
 				$('.result-message').html(resultMessege);
 				$('.result-message2').html(resultMessege2);
 				
