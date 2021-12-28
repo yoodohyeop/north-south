@@ -195,6 +195,25 @@ margin: 0 auto;
 
 }
 
+.link-icon { position: relative; display: inline-block; width: auto;    font-size: 14px; font-weight: 500; color: #333; margin-right: 10px; padding-top: 50px; }
+.link-icon.twitter { background-image: url(./images/icon-twitter.png); background-repeat: no-repeat; }
+.link-icon.facebook { background-image: url(./images/icon-facebook.png); background-repeat: no-repeat; } 
+.link-icon.kakao { background-image: url(./images/icon-kakao.png); background-repeat: no-repeat; }
+
+
+
+.ad-banner {
+	width: 320px;
+	margin: 0 auto;
+}
+
+.ad-banner2 {
+	width: 300px;
+	margin: 0 auto;
+}
+
+
+
 
 
 

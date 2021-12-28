@@ -1,8 +1,10 @@
-
 <html>
 	<head>
 		<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61bebb5f85e08e1f"></script>
+		<script
+			type="text/javascript"
+			src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61bebb5f85e08e1f"
+		></script>
 
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
@@ -18,8 +20,6 @@
 
 		<title>북방계 남방계 인공지능 테스트</title>
 		<link rel="stylesheet" href="style.css" />
-		
-
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
@@ -57,9 +57,7 @@
 		<section class="section">
 			<h1 class="title">인공지능 북방계 남방계 테스트</h1>
 			<h2 class="subtitle">나의 조상님은 어떤 민족일까?</h2>
-
 		</section>
-
 
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -83,38 +81,60 @@
 					<h3 class="upload-text">얼굴 사진을 올려놓거나 눌러서 업로드를 하세요!</h3>
 				</div>
 			</div>
-			
+
 			<div class="file-upload-content">
 				<img class="file-upload-image" src="#" id="face-image" alt="your image" />
 				<div id="loading" class="animated bounce">
-                <div class="spinner-border" role="status">
-                </div>
-                <p class="text-center">AI가 당신의 얼굴을 분석중입니다.</p>
-            </div>
-				
+					<div class="spinner-border" role="status"></div>
+					<p class="text-center">AI가 당신의 얼굴을 분석중입니다.</p>
+				</div>
+
 				<pp></pp>
 
 				<p class="result-message"></p>
 				<p class="result-message2"></p>
-     			<p class="result-message3"></p>
-				<p class="result-message4"></p>           
+				<p class="result-message3"></p>
+				<p class="result-message4"></p>
 
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <div class="addthis_inline_share_toolbox_o58v"></div>
-            
+				<!-- Go to www.addthis.com/dashboard to customize your tools -->
+				<div class="addthis_inline_share_toolbox_o58v"></div>
 
-						<div id="label-container"></div>
+				<div id="label-container"></div>
 
-				<div class="image-title-wrap">
-					
-				</div>
+				<div class="image-title-wrap"></div>
 			</div>
 		</div>
 
 		<div id="webcam-container"></div>
 
 		<div id="disqus_thread"></div>
-	
+<div class="ad-banner">
+			<ins
+				class="kakao_ad_area"
+				style="display: none;"
+				data-ad-unit="DAN-gnYjvsLaztZEv9h0"
+				data-ad-width="320"
+				data-ad-height="100"
+			></ins>
+		</div>
+
+		<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+		
+		
+				<section class="section22">
+			<h1 class="title"></h1>
+		</section>
+		
+		
+				<div class="ad-banner2">
+			<ins
+				class="kakao_ad_area"
+				style="display: none;"
+				data-ad-unit="DAN-SXxa2TiavhZXnxfg"
+				data-ad-width="300"
+				data-ad-height="250"
+			></ins>
+		</div>
 		<noscript
 			>Please enable JavaScript to view the
 			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
@@ -137,7 +157,7 @@
 					};
 
 					reader.readAsDataURL(input.files[0]);
-					init().then(()=>{
+					init().then(() => {
 						console.log(predict());
 					});
 				} else {
@@ -147,7 +167,7 @@
 
 			function removeUpload() {
 				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
-								            $('.file-upload-content').hide();
+				$('.file-upload-content').hide();
 
 				$('.file-upload-content').hide();
 				$('.image-upload-wrap').show();
@@ -191,67 +211,77 @@
 			async function predict() {
 				var image = document.getElementById('face-image');
 				const prediction = await model.predict(image, false);
-				prediction.sort((a,b)=>parseFloat(b.probability)-parseFloat(a.probability));
+				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
-				var resultMessege,resultMessege2,resultMessege3,resultMessege4; 
-				switch(prediction[0].className) {
-					case "north_w":
+				var resultMessege, resultMessege2, resultMessege3, resultMessege4;
+				switch (prediction[0].className) {
+					case 'north_w':
 						$('pp').html('<img classs ="result-img" src="a.png"/>');
 
-						resultMessege = "북방계";
-						resultMessege2 = "오밀조밀한 이목구비를 지닌 당신의 조상님은 말을 타고 뛰놀던 민족이셨군요!  ";
-						resultMessege3 ="대표적인 북방계 여자 연예인 : 김고은 서현진 아이린 전지현 가인 수지"
-						resultMessege4 ="대표적인 북방계 남자 연예인 : 현빈 유승호 송중기 이제훈 유아인 엘"
+						resultMessege = '북방계';
+						resultMessege2 =
+							'오밀조밀한 이목구비를 지닌 당신의 조상님은 말을 타고 뛰놀던 민족이셨군요!  ';
+						resultMessege3 =
+							'대표적인 북방계 여자 연예인 : 김고은 서현진 아이린 전지현 가인 수지';
+						resultMessege4 =
+							'대표적인 북방계 남자 연예인 : 현빈 유승호 송중기 이제훈 유아인 엘';
 
-   				     break;
-					case "north_m":
+						break;
+					case 'north_m':
 						$('pp').html('<img classs ="result-img" src="a.png"/>');
 
-						resultMessege = "북방계"
-						resultMessege2 = "오밀조밀한 이목구비를 지닌 당신의 조상님은 말을 타고 뛰놀던 민족이셨군요!";
-						resultMessege3 ="대표적인 북방계 여자 연예인 : 김고은 서현진 아이린 전지현 가인 수지"
-						resultMessege4 ="대표적인 북방계 남자 연예인 : 현빈 유승호 송중기 이제훈 유아인 엘"
+						resultMessege = '북방계';
+						resultMessege2 =
+							'오밀조밀한 이목구비를 지닌 당신의 조상님은 말을 타고 뛰놀던 민족이셨군요!';
+						resultMessege3 =
+							'대표적인 북방계 여자 연예인 : 김고은 서현진 아이린 전지현 가인 수지';
+						resultMessege4 =
+							'대표적인 북방계 남자 연예인 : 현빈 유승호 송중기 이제훈 유아인 엘';
 
-       				 break;
-       				case "south_w":
+						break;
+					case 'south_w':
 						$('pp').html('<img classs ="result-img" src="a2.png"/>');
 
-						resultMessege = "남방계"
-						resultMessege2 = "뚜렷하고 진한 이목구비가 시원시원하고 큼직한당신의 조상님은 배를 타고 항해하던 민족이였군요!";
-						resultMessege3 ="대표적인 남방계 여자 연예인 : 김혜수 예리 이효리 지효 하연수 한가인 "
-						resultMessege4 ="대표적인 남방계 남자 연예인 : 원빈 장동건 카이 민호 태민 이민호 김희철"
+						resultMessege = '남방계';
+						resultMessege2 =
+							'뚜렷하고 진한 이목구비가 시원시원하고 큼직한당신의 조상님은 배를 타고 항해하던 민족이였군요!';
+						resultMessege3 =
+							'대표적인 남방계 여자 연예인 : 김혜수 예리 이효리 지효 하연수 한가인 ';
+						resultMessege4 =
+							'대표적인 남방계 남자 연예인 : 원빈 장동건 카이 민호 태민 이민호 김희철';
 
-   				     break;
-					case "south_m":
+						break;
+					case 'south_m':
 						$('pp').html('<img classs ="result-img" src="a2.png"/>');
 
-						resultMessege = "남방계"
-						resultMessege2 = "뚜렷하고 진한 이목구비가 시원시원하고 큼직한당신의 조상님은 배를 타고 항해하던 민족이였군요!";
-						resultMessege3 ="대표적인 남방계 여자 연예인 : 김혜수 예리 이효리 지효 하연수 한가인 "
-						resultMessege4 ="대표적인 남방계 남자 연예인 : 원빈 장동건 카이 민호 태민 이민호 김희철"
+						resultMessege = '남방계';
+						resultMessege2 =
+							'뚜렷하고 진한 이목구비가 시원시원하고 큼직한당신의 조상님은 배를 타고 항해하던 민족이였군요!';
+						resultMessege3 =
+							'대표적인 남방계 여자 연예인 : 김혜수 예리 이효리 지효 하연수 한가인 ';
+						resultMessege4 =
+							'대표적인 남방계 남자 연예인 : 원빈 장동건 카이 민호 태민 이민호 김희철';
 
-       				 break;
-  				 default: 
-						resultMessege = "알수없음"
-    			     break;
+						break;
+					default:
+						resultMessege = '알수없음';
+						break;
 				}
-			    $('.text-center').hide();
+				$('.text-center').hide();
 				$('.spinner-border').hide();
 				$('.result-message').html(resultMessege);
 				$('.result-message2').html(resultMessege2);
 				$('.result-message3').html(resultMessege3);
 				$('.result-message4').html(resultMessege4);
 
-					// for (let i = 0; i < maxPredictions; i++) {
-					// const classPrediction =
-					// 	prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
-					// labelContainer.childNodes[i].innerHTML = classPrediction;
-					// }
-				
-				
-			
+				// for (let i = 0; i < maxPredictions; i++) {
+				// const classPrediction =
+				// 	prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
+				// labelContainer.childNodes[i].innerHTML = classPrediction;
+				// }
 			}
 		</script>
+		
 	</body>
 
 	<!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
